@@ -77,3 +77,64 @@ body {
 .placeholder-text { color: #95a5a6; font-style: italic; }
 
 footer { text-align: center; padding: 40px; color: #7f8c8d; font-size: 0.8rem; }
+
+/* ═══════════════════════════════════════════ */
+/* ── Ajouts pour RQ3 (Issam)              ── */
+/* ═══════════════════════════════════════════ */
+
+/* Bloc de définitions (GDP, UHC, PPP) */
+.key-terms {
+    background: #f0f4f8;
+    border-left: 4px solid var(--accent);
+    padding: 15px 20px;
+    margin: 15px 0 25px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.key-terms h5 {
+    margin: 0 0 10px 0;
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+.key-terms ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.key-terms li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Paragraphe d'intro sous le titre de viz */
+.viz-wrapper > p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Listes dans l'analyse approfondie */
+.deep-analysis ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.deep-analysis li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Liens dans data methodology */
+.data-info a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+    transition: border-bottom 0.2s;
+}
+
+.data-info a:hover {
+    border-bottom: 2px solid var(--accent);
+}

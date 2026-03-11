@@ -24,10 +24,35 @@
             <p>This topic is vital because healthcare access is unequal; differences in resources and public funding create large global health inequalities. Studying this helps highlight how access varies between countries.</p>
         </section>
 
-        <section class="section-card rq-block">
+             <!-- ═══════════════════ RQ1 — ALEXANDRE ═══════════════════ -->
+        <section class="section-card rq-block main-highlight">
             <h3>How does healthcare spending per person affect life expectancy in different countries?</h3>
-            <p class="placeholder-text">Analysis for RQ1 will be integrated here by the team member.</p>
+
+            <div class="viz-wrapper">
+                <h4>Visualization 01: Global Spending vs Life Expectancy</h4>
+                <p>This interactive bubble chart maps the relationship between <strong>healthcare spending per capita</strong> (X axis, log scale) and <strong>life expectancy</strong> (Y axis) across all countries. Each bubble represents a country, colored by <strong>world region</strong> and sized by <strong>population</strong>. A year slider allows exploration of how this relationship evolves over time.</p>
+
+                <div class="iframe-container">
+                    <iframe width="100%" height="750" frameborder="0"
+                        src="https://observablehq.com/embed/79ac0937255e098a@330?cells=viewof+yearSelected%2Cgraph1">
+                    </iframe>
+                </div>
+
+                <div class="deep-analysis">
+                    <h5>Extended Analysis: The Global Pattern</h5>
+                    <p>The visualization reveals a clear <strong>positive logarithmic relationship</strong> between healthcare spending and life expectancy. Countries that invest more in healthcare per person tend to have significantly higher life expectancy — but this relationship is not linear.</p>
+                    <p>At the <span class="blue-text">lower end of spending</span> (under $200 per capita), countries show wide variation in life expectancy, ranging from 45 to 70 years. This suggests that at low spending levels, <em>other factors</em> such as political stability, sanitation infrastructure, and disease prevalence play a dominant role.</p>
+                    <p>At the <span class="red-text">higher end of spending</span> (above $3,000 per capita), countries cluster tightly between 75 and 85 years of life expectancy. This convergence demonstrates that beyond a certain threshold, additional spending yields diminishing improvements.</p>
+                    <p>The <strong>regional color encoding</strong> highlights stark geographic disparities: <span style="color: #e15759; font-weight: bold;">European</span> countries dominate the top-right quadrant (high spending, high life expectancy), while <span style="color: #4e79a7; font-weight: bold;">African</span> nations cluster in the bottom-left (low spending, low life expectancy). <span style="color: #76b7b2; font-weight: bold;">North American</span> countries sit at the far right with the highest spending levels. <span style="color: #f28e2b; font-weight: bold;">Asian</span> countries show the widest spread, reflecting the enormous economic diversity within the continent.</p>
+                    <p>The <strong>population-sized bubbles</strong> add an important dimension: large countries like <strong>China</strong> and <strong>India</strong> represent billions of people whose health outcomes are directly tied to national spending decisions, making their position on this chart particularly impactful from a global health perspective.</p>
+                </div>
+            </div>
+
+            <div class="encoding-note">
+                <p><strong>Visual Encodings:</strong> <em>X position</em> = health spending per capita (log scale, PPP $), <em>Y position</em> = life expectancy (years), <em>bubble size</em> = population, <em>color</em> = world region. Interactive filter for year selection via slider.</p>
+            </div>
         </section>
+        <!-- ═══════════════════ FIN RQ1 ═══════════════════ -->
 
         <section class="section-card rq-block main-highlight">
             <h3>Do countries that spend more on healthcare see diminishing returns regarding increases in life expectancy?</h3>
@@ -63,19 +88,76 @@
             </div>
         </section>
 
-        <section class="section-card rq-block">
+        <!-- ═══════════════════ RQ3 — ISSAM ═══════════════════ -->
+        <section class="section-card rq-block main-highlight">
             <h3>In what ways do income levels and healthcare access affect the link between health spending and life expectancy?</h3>
-            <p class="placeholder-text">Analysis for RQ3 will be integrated here by the team member.</p>
+
+            <div class="viz-wrapper">
+                <h4>Visualization 01: Income, Healthcare Access & Life Expectancy</h4>
+                <p>This interactive bubble chart encodes four dimensions simultaneously: <strong>health spending</strong> (X axis, log scale), <strong>life expectancy</strong> (Y axis), <strong>GDP per capita</strong> (color — representing income level), and <strong>UHC Service Coverage Index</strong> (bubble size — representing healthcare access). Users can filter by year and region to explore patterns within specific contexts.</p>
+
+                <div class="key-terms">
+                    <h5>Key Terms</h5>
+                    <ul>
+                        <li><strong>GDP (Gross Domestic Product) per capita:</strong> The total economic output of a country divided by its population — a measure of <em>income level</em>.</li>
+                        <li><strong>UHC (Universal Health Coverage) Index:</strong> A score from 0 to 100 measuring how well a population can <em>access essential health services</em> (vaccines, doctors, hospitals, treatments).</li>
+                        <li><strong>PPP (Purchasing Power Parity):</strong> An adjustment that makes spending <em>comparable across countries</em> by accounting for differences in cost of living.</li>
+                    </ul>
+                </div>
+
+                <div class="iframe-container">
+                    <iframe width="100%" height="888" frameborder="0"
+                        src="https://observablehq.com/embed/79ac0937255e098a@328?cells=viewof+yearSelected1%2Cviewof+regionSelected%2Cgraph5">
+                    </iframe>
+                </div>
+
+                <div class="deep-analysis">
+                    <h5>Extended Analysis: The Double Advantage</h5>
+                    <p>This visualization reveals a <strong>"double advantage"</strong> pattern: countries with both high income (warm colors) and strong healthcare access (large bubbles) consistently achieve the highest life expectancy. Conversely, countries with low GDP and low UHC cluster in the bottom-left corner with the lowest life expectancy.</p>
+                    <p>However, the most insightful finding lies in the <strong>outliers</strong>. Some countries with moderate spending but high UHC scores (large bubbles in the middle of the X axis) achieve life expectancy levels comparable to much wealthier nations. This suggests that <em>how healthcare resources are distributed</em> (UHC) matters as much as — or more than — <em>how much is spent</em> overall.</p>
+                    <p>Filtering by region reveals distinct patterns: in <span class="blue-text">Africa</span>, even small increases in UHC correspond to significant life expectancy gains. In <span class="red-text">Europe</span>, where UHC is universally high, the variation in life expectancy is more closely tied to GDP differences.</p>
+                </div>
+            </div>
+
+            <div class="viz-wrapper">
+                <h4>Visualization 02: Country Profile Comparison (Radar Chart)</h4>
+                <p>This radar chart allows a direct comparison of two countries across four key dimensions: <strong>Health Spending</strong>, <strong>Life Expectancy</strong>, <strong>GDP per capita</strong>, and <strong>UHC Index</strong>. The logarithmic normalization ensures that all variables are visually comparable regardless of their original scale.</p>
+
+                <div class="iframe-container">
+                    <iframe width="100%" height="769" frameborder="0"
+                        src="https://observablehq.com/embed/79ac0937255e098a@330?cells=viewof+yearSelected1%2Cviewof+country1%2Cviewof+country2%2CradarChart">
+                    </iframe>
+                </div>
+
+                <div class="deep-analysis">
+                    <h5>Extended Analysis: Why Profiles Matter</h5>
+                    <p>The radar chart shifts the analysis from correlation to <strong>explanation</strong>. By comparing two countries side by side, we can see <em>why</em> one country outperforms another in life expectancy.</p>
+                    <p>For example, comparing <strong>France vs Algeria</strong> shows that France dominates on all four axes — spending, life expectancy, GDP, and UHC — creating a much larger polygon. But the most revealing comparisons involve countries that <em>break the expected pattern</em>:</p>
+                    <ul>
+                        <li>A country with <strong>high GDP but low UHC</strong> may have lower life expectancy than expected — showing that wealth alone is not enough.</li>
+                        <li>A country with <strong>low GDP but high UHC</strong> may outperform expectations — showing that efficient healthcare access can compensate for lower income.</li>
+                    </ul>
+                    <p>This directly answers our research question: income levels and healthcare access <strong>independently and jointly</strong> affect the spending–life expectancy relationship, and the radar chart makes these interactions visible at the individual country level.</p>
+                </div>
+            </div>
+
+            <div class="encoding-note">
+                <p><strong>Visual Encodings (Bubble Chart):</strong> <em>X position</em> = health spending (log scale), <em>Y position</em> = life expectancy, <em>bubble size</em> = UHC index (healthcare access, power scale), <em>color</em> = GDP per capita (income level, log scale with "turbo" scheme). Interactive filters for year and region.</p>
+                <p><strong>Visual Encodings (Radar Chart):</strong> <em>Radial axes</em> = four normalized dimensions (spending, life exp, GDP, UHC). <em>Polygon area</em> = overall country profile. <em>Color</em> = country identity (blue vs red). Log normalization for spending and GDP to ensure visual comparability.</p>
+            </div>
         </section>
+        <!-- ═══════════════════ FIN RQ3 ═══════════════════ -->
 
         <section class="section-card data-info">
             <h2>Data Methodology</h2>
             <p>Our research utilizes comprehensive datasets:</p>
             <ul>
-                <li><strong>Current health expenditure per capita:</strong> Measured in current US$.</li>
+                <li><strong>Current health expenditure per capita (PPP $):</strong> Adjusted for purchasing power parity to enable fair cross-country comparison.</li>
                 <li><strong>Life expectancy at birth:</strong> Measured in total years.</li>
+                <li><strong>GDP per capita (PPP $):</strong> Gross Domestic Product per person, adjusted for purchasing power.</li>
+                <li><strong>UHC Service Coverage Index:</strong> WHO indicator (0–100) measuring access to essential health services.</li>
             </ul>
-            <p>These datasets are sufficient to explore relationship trends, compare income groups, and analyze several decades of global health evolution.</p>
+            <p>Sources: <a href="https://ourworldindata.org/" target="_blank">Our World in Data (OWID)</a>, <a href="https://data.worldbank.org/" target="_blank">World Bank — World Development Indicators</a>, <a href="https://www.who.int/" target="_blank">World Health Organization (WHO)</a>.</p>
         </section>
 
     </main>
