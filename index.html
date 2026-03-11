@@ -3,80 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Price of Life | Healthcare Spending Analysis</title>
+    <title>Life Expectancy & Healthcare Spending | Group 11</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <span class="tag">DATA VIZUALISATION FINAL PROJECT</span>
-        <h1>The Price of Life: Does More Spending Buy More Time?</h1>
-        <p class="subtitle">An interactive investigation into the diminishing returns of global healthcare expenditure and systemic efficiency.</p>
+    <header class="hero">
+        <div class="container">
+            <span class="badge">Data Visualization Final Project</span>
+            <h1>Life Expectancy and Healthcare Spending</h1>
+            <p class="authors">Alexandre Fakhfakh, Alexis Van, Issam Atoui (Groupe 12)</p>
+        </div>
     </header>
 
-    <main>
+    <main class="container">
+        
+        <section class="section-card">
+            <h2>What is it about?</h2>
+            <p>This project examines the relationship between life expectancy, a key indicator of population health, and healthcare spending, which reflects national investment in medical systems.</p>
+            <p>This topic is vital because healthcare access is unequal; differences in resources and public funding create large global health inequalities. Studying this helps highlight how access varies between countries.</p>
+        </section>
 
-        <section class="viz-card">
-            <h2>01. The Healthcare Plateau</h2>
-            <p class="description">
-                Does a higher budget always translate to a longer life? This visualization aggregates global data into spending tiers to reveal the overall trend. 
-                We observe a sharp initial increase followed by a clear "saturation point".
-            </p>
+        <section class="section-card rq-block">
+            <h3>How does healthcare spending per person affect life expectancy in different countries?</h3>
+            <p class="placeholder-text">Analysis for RQ1 will be integrated here by the team member.</p>
+        </section>
 
-            <div class="iframe-wrapper">
-                <iframe width="100%" height="626" frameborder="0"
-                    src="https://observablehq.com/embed/79ac0937255e098a@293?cells=graph_spending1">
-                </iframe>
+        <section class="section-card rq-block main-highlight">
+            <h3>Do countries that spend more on healthcare see diminishing returns regarding increases in life expectancy?</h3>
+
+            <div class="viz-wrapper">
+                <h4>Visualization 01: The Healthcare Plateau</h4>
+                <div class="iframe-container">
+                    <iframe width="100%" height="626" frameborder="0"
+                        src="https://observablehq.com/embed/79ac0937255e098a@293?cells=graph_spending1">
+                    </iframe>
+                </div>
+                <div class="deep-analysis">
+                    <h5>Extended Analysis: The Saturation Point</h5>
+                    <p>This visualization confirms a logarithmic-style relationship between spending and longevity. At early stages of development, small investments in healthcare lead to dramatic jumps in life expectancy, likely due to fundamental improvements in sanitation and basic medical access. However, as shown by the plateauing area, once spending reaches a certain threshold, the curve flattens. This visual evidence supports the theory that money alone cannot indefinitely extend human life; instead, it reaches a "saturation point" where additional dollars yield smaller and smaller benefits.</p>
+                </div>
             </div>
 
+            <div class="viz-wrapper">
+                <h4>Visualization 02: Marginal Gains Efficiency</h4>
+                <div class="iframe-container">
+                    <iframe width="100%" height="526" frameborder="0"
+                        src="https://observablehq.com/embed/79ac0937255e098a@293?cells=graph_spending2">
+                    </iframe>
+                </div>
+                <div class="deep-analysis">
+                    <h5>Extended Analysis: Quantifying Diminishing Returns</h5>
+                    <p>By calculating the marginal gain, the years of life "bought" by each additional $1,000, we can pinpoint where efficiency drops. The transition from <span class="blue-text">high-gain tiers</span> to <span class="red-text">diminishing return tiers</span> is striking. While the first $1,000 adds nearly two decades of life, the return for the wealthiest nations drops significantly. In some high-spending cases, the gain is negligible or even slightly negative, suggesting that beyond a certain budget, systemic inefficiencies or lifestyle-related health issues become more influential than medical expenditure itself.</p>
+                </div>
+            </div>
+            
             <div class="encoding-note">
-                <strong>Visual Encoding:</strong> We used an <code>Area + Line</code> mark to represent the "mass" of the data. 
-                The Y-axis represents the mean life expectancy per tier. The solid shape emphasizes the <em>plateau effect</em> 
-                more effectively than a simple scatter plot.
+                <p><strong>Visual Encodings:</strong> We used <em>Area and Line marks</em> for the plateau to emphasize the global trend, and <em>Bar marks</em> with a diverging color scale to highlight the transition from efficient to inefficient spending zones.</p>
             </div>
         </section>
 
-        <section class="viz-card">
-            <h2>02. Measuring Efficiency (Marginal Gains)</h2>
-            <p class="description">
-                To answer our research question about <strong>diminishing returns</strong>, we calculated the <em>Marginal Gain</em>: 
-                how many <u>additional</u> years of life are gained for every extra $1,000 spent.
-            </p>
-
-            <div class="iframe-wrapper">
-                <iframe width="100%" height="526" frameborder="0"
-                    src="https://observablehq.com/embed/79ac0937255e098a@293?cells=graph_spending2">
-                </iframe>
-            </div>
-
-            <div class="encoding-note">
-                <strong>Visual Encoding:</strong> <code>Bar Marks</code> were used to compare relative differences between tiers. 
-                <span class="color-blue">Blue</span> indicates high efficiency (>1 year gained), 
-                while <span class="color-red">Red</span> signals the zone of diminishing returns.
-            </div>
+        <section class="section-card rq-block">
+            <h3>In what ways do income levels and healthcare access affect the link between health spending and life expectancy?</h3>
+            <p class="placeholder-text">Analysis for RQ3 will be integrated here by the team member.</p>
         </section>
 
-        <section class="viz-card critical-thought">
-            <h2>Critical Thought & Limitations</h2>
-            <p>
-                <strong>Findings:</strong> Our analysis reveals that health spending is vital for low-income nations (gaining +20 years for the first $1k), 
-                but becomes extremely inefficient past the $5,000 mark. 
-            </p>
-            <p>
-                <strong>Limitations:</strong> 
-                <ul>
-                    <li><strong>Outliers:</strong> Some tiers (like $10k+) are dominated by a single country (USA), skewing the mean.</li>
-                    <li><strong>Purchasing Power:</strong> The data doesn't account for the local cost of medical services.</li>
-                    <li><strong>Data Lag:</strong> Reporting delays in some regions may affect the most recent tiers.</li>
-                </ul>
-            </p>
+        <section class="section-card data-info">
+            <h2>Data Methodology</h2>
+            <p>Our research utilizes comprehensive datasets:</p>
+            <ul>
+                <li><strong>Current health expenditure per capita:</strong> Measured in current US$.</li>
+                <li><strong>Life expectancy at birth:</strong> Measured in total years.</li>
+            </ul>
+            <p>These datasets are sufficient to explore relationship trends, compare income groups, and analyze several decades of global health evolution.</p>
         </section>
 
     </main>
 
     <footer>
-        <p>Data Sources: World Bank & Our World in Data | Implemented with D3.js & Observable Plot</p>
-        <p>Project for the Information Visualization Course 2026</p>
+        <p>Information Visualization Project | Group 11 | 2026</p>
     </footer>
 
 </body>
