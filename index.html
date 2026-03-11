@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Price of Life | Healthcare Spending Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <span class="tag">DATA VIZUALISATION FINAL PROJECT</span>
+        <h1>The Price of Life: Does More Spending Buy More Time?</h1>
+        <p class="subtitle">An interactive investigation into the diminishing returns of global healthcare expenditure and systemic efficiency.</p>
+    </header>
+
+    <main>
+
+        <section class="viz-card">
+            <h2>01. The Healthcare Plateau</h2>
+            <p class="description">
+                Does a higher budget always translate to a longer life? This visualization aggregates global data into spending tiers to reveal the overall trend. 
+                We observe a sharp initial increase followed by a clear "saturation point".
+            </p>
+
+            <div class="iframe-wrapper">
+                <iframe width="100%" height="626" frameborder="0"
+                    src="https://observablehq.com/embed/79ac0937255e098a@293?cells=graph_spending1">
+                </iframe>
+            </div>
+
+            <div class="encoding-note">
+                <strong>Visual Encoding:</strong> We used an <code>Area + Line</code> mark to represent the "mass" of the data. 
+                The Y-axis represents the mean life expectancy per tier. The solid shape emphasizes the <em>plateau effect</em> 
+                more effectively than a simple scatter plot.
+            </div>
+        </section>
+
+        <section class="viz-card">
+            <h2>02. Measuring Efficiency (Marginal Gains)</h2>
+            <p class="description">
+                To answer our research question about <strong>diminishing returns</strong>, we calculated the <em>Marginal Gain</em>: 
+                how many <u>additional</u> years of life are gained for every extra $1,000 spent.
+            </p>
+
+            <div class="iframe-wrapper">
+                <iframe width="100%" height="526" frameborder="0"
+                    src="https://observablehq.com/embed/79ac0937255e098a@293?cells=graph_spending2">
+                </iframe>
+            </div>
+
+            <div class="encoding-note">
+                <strong>Visual Encoding:</strong> <code>Bar Marks</code> were used to compare relative differences between tiers. 
+                <span class="color-blue">Blue</span> indicates high efficiency (>1 year gained), 
+                while <span class="color-red">Red</span> signals the zone of diminishing returns.
+            </div>
+        </section>
+
+        <section class="viz-card critical-thought">
+            <h2>Critical Thought & Limitations</h2>
+            <p>
+                <strong>Findings:</strong> Our analysis reveals that health spending is vital for low-income nations (gaining +20 years for the first $1k), 
+                but becomes extremely inefficient past the $5,000 mark. 
+            </p>
+            <p>
+                <strong>Limitations:</strong> 
+                <ul>
+                    <li><strong>Outliers:</strong> Some tiers (like $10k+) are dominated by a single country (USA), skewing the mean.</li>
+                    <li><strong>Purchasing Power:</strong> The data doesn't account for the local cost of medical services.</li>
+                    <li><strong>Data Lag:</strong> Reporting delays in some regions may affect the most recent tiers.</li>
+                </ul>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Data Sources: World Bank & Our World in Data | Implemented with D3.js & Observable Plot</p>
+        <p>Project for the Information Visualization Course 2026</p>
+    </footer>
+
+</body>
+</html>
